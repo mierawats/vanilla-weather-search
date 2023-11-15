@@ -13,10 +13,6 @@ function displayTemperature(response) {
   let cityDisplay = document.querySelector("#current-city");
   cityDisplay.innerHTML = response.data.city;
 
-  let temperatureDisplay = document.querySelector(".current-temperature-value");
-  let temperature = Math.round(response.data.temperature.current);
-  temperatureDisplay.innerHTML = temperature;
-
   let conditionDisplay = document.querySelector("#condition-description");
   conditionDisplay.innerHTML = response.data.condition.description;
 
@@ -25,6 +21,13 @@ function displayTemperature(response) {
 
   let windSpeedDisplay = document.querySelector("#wind-speed");
   windSpeedDisplay.innerHTML = response.data.wind.speed;
+
+  let temperatureDisplay = document.querySelector(".current-temperature-value");
+  let temperature = Math.round(response.data.temperature.current);
+  temperatureDisplay.innerHTML = temperature;
+
+  let iconDisplay = document.querySelector(".current-temperature-icon");
+  iconDisplay.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
 }
 
 function formatDate(date) {
