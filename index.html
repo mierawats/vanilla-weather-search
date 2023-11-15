@@ -9,20 +9,27 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/index.css" />
     <title>Vanilla Weather Search</title>
   </head>
   <body>
     <div class="weather-app-page">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a City"
             required
             class="search-input"
+            id="search-input"
           />
-          <input type="submit" value="Search" class="search-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-button"
+            id="search-button"
+          />
         </form>
       </header>
       <main>
@@ -58,4 +65,5 @@
       </footer>
     </div>
   </body>
+  <script src="src/index.js"></script>
 </html>
